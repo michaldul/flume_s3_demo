@@ -2,7 +2,7 @@ FROM probablyfine/flume:latest
 
 ENV FLUME_AGENT_NAME a1
 
-ENV HADOOP_VERSION=3.1.0
+ENV HADOOP_VERSION=3.1.1
 ENV HADOOP_HOME=/opt/lib/hadoop-$HADOOP_VERSION
 
 RUN mkdir /opt/lib && \
