@@ -1,0 +1,22 @@
+version: "2.1"
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3.6
+
+  producer:
+    build:
+      context: producer
+    links:
+      - "rabbitmq"
+    depends_on:
+      - "rabbitmq"
+
+  flume:
+    build:
+      context: flume
+    links:
+      - "rabbitmq"
+    depends_on:
+      - "rabbitmq"
